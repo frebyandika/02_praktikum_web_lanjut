@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +25,12 @@ use Illuminate\Support\Facades\Route;
 //    return 'NIM : 1941720128 <br> Nama : Frebyandika Dwima Putra <br> Kelas : Web-B';
 //});
 
-Route::get('/articles/{id}', function ($id) {
-    return 'Halaman artikel ini dengan id ' . $id;
-});
+//Route::get('/articles/{id}', function ($id) {
+//    return 'Halaman artikel ini dengan id ' . $id;
+//});
+
+//Route::get('/', [PageController::class, 'index']);
+
+//Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/articles/{id}', [PageController::class, 'articles']);
