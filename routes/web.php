@@ -33,4 +33,10 @@ use App\Http\Controllers\ArticleController;
 
 //Route::get('/about', [PageController::class, 'about']);
 
-Route::get('/articles/{id}', [PageController::class, 'articles']);
+//Route::get('/articles/{id}', [PageController::class, 'articles']);
+
+//Route::get('/', [HomeController::class, 'index']);
+
+//Route::get('/about', [AboutController::class, 'index']);
+
+Route::get('/articles/{id}', [ArticleController::class, 'show']);
