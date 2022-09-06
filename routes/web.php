@@ -5,6 +5,10 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\AboutUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,4 +43,20 @@ use App\Http\Controllers\ArticleController;
 
 //Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/articles/{id}', [ArticleController::class, 'show']);
+//Route::get('/articles/{id}', [ArticleController::class, 'show']);
+
+//Route::get('/home', function () {
+//    echo '<h1>Halaman Awal Website<h1>';
+//});
+
+//Route::prefix('category')->group(function () {
+//    route::get('/{id}', [ProductController::class, 'product']);
+//});
+
+//Route::get('/news/{id?}', [NewsController::class, 'news']);
+
+//Route::prefix('program')->group(function () {
+//    route::get('/{id}', [ProgramController::class, 'program']);
+//});
+
+Route::get('/AboutUs', [AboutUsController::class, 'about']);
